@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 // Classe Estoque
 public class Estoque {
-    private ArrayList<Produto> produtos;
-    private ArrayList<Fornecedor> fornecedores;
+    private ArrayList<ProdutoDAO> produtos; // Mantido para armazenar objetos do tipo ProdutoDAO
+    private ArrayList<FornecedorDAO> fornecedores; // Mantido para armazenar objetos do tipo FornecedorDAO
 
     // Construtor
     public Estoque() {
@@ -14,12 +14,12 @@ public class Estoque {
     }
 
     // Adicionar Produto ao Estoque
-    public void adicionarProduto(Produto produto) {
+    public void adicionarProduto(ProdutoDAO produto) {
         produtos.add(produto);
     }
 
     // Adicionar Fornecedor
-    public void adicionarFornecedor(Fornecedor fornecedor) {
+    public void adicionarFornecedor(FornecedorDAO fornecedor) {
         fornecedores.add(fornecedor);
     }
 
@@ -28,8 +28,8 @@ public class Estoque {
         if (produtos.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.");
         } else {
-            for (Produto produto : produtos) {
-                System.out.println(produto);
+            for (ProdutoDAO produto : produtos) {
+                System.out.println(produto); // Imprime detalhes do produto
             }
         }
     }
@@ -39,8 +39,8 @@ public class Estoque {
         if (fornecedores.isEmpty()) {
             System.out.println("Nenhum fornecedor cadastrado.");
         } else {
-            for (Fornecedor fornecedor : fornecedores) {
-                System.out.println(fornecedor);
+            for (FornecedorDAO fornecedor : fornecedores) {
+                System.out.println(fornecedor); // Imprime detalhes do fornecedor
             }
         }
     }
